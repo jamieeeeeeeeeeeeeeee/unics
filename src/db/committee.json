@@ -1,0 +1,40 @@
+{
+  "current": [
+    {
+      "name": "Sarah Saad",
+      "position": "Co-Chair",
+      "email": "chair@unicsmcr.com",
+      "linkedin": "https://www.linkedin.com/in/sarahsaad"
+    },
+    {
+      "name": "Minahil Tariq",
+      "position": "Co-Chair",
+      "email": "chair@unicsmcr.com",
+      "linkedin": "https://www.linkedin.com/in/minahil-h-tariq"
+    },
+    {
+      "name": "Sarah Saad",
+      "position": "Co-Chair",
+      "email": "chair@unicsmcr.com",
+      "linkedin": "https://www.linkedin.com/in/sarahsaad"
+    },
+    {
+      "name": "Minahil Tariq",
+      "position": "Co-Chair",
+      "email": "chair@unicsmcr.com",
+      "linkedin": "https://www.linkedin.com/in/minahil-h-tariq"
+    }
+  ],
+  "2022-2023": [
+    {
+      "name": "Gwydion Smit",
+      "position": "Co-Chair",
+      "linkedin": "https://www.linkedin.com/in/gwydionsmit"
+    },
+    {
+      "name": "Germaine George",
+      "position": "Co-Chair",
+      "linkedin": "https://www.linkedin.com/in/germaine-george-4136b515b"
+    }
+  ]
+}
