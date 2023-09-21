@@ -13,7 +13,7 @@
 
   function animate() {
     offset -= speed;
-    if (offset <= -ticker.offsetWidth / 2) {
+    if (offset <= -ticker.offsetWidth / 6) {
       offset = 0;
     }
     
@@ -28,6 +28,18 @@
 
 <div class="ticker-container">
   <div class="ticker" bind:this={ticker}>
+    {#each images as image (image)}
+      <img class="sponsor-image" src={`/sponsors/${image}`} alt={image}>
+    {/each}
+    {#each images as image (image)}
+      <img class="sponsor-image" src={`/sponsors/${image}`} alt={image}>
+    {/each}
+    {#each images as image (image)}
+      <img class="sponsor-image" src={`/sponsors/${image}`} alt={image}>
+    {/each}
+    {#each images as image (image)}
+      <img class="sponsor-image" src={`/sponsors/${image}`} alt={image}>
+    {/each}
     {#each images as image (image)}
       <img class="sponsor-image" src={`/sponsors/${image}`} alt={image}>
     {/each}
