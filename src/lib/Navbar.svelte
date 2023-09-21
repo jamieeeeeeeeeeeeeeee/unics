@@ -1,3 +1,4 @@
+<!-- the actual navbar needs a layout fix still :)-->
 <script lang="ts">
   import { writable } from 'svelte/store';
   export const openMenu = writable(false);
@@ -57,7 +58,7 @@
   .main {
     top: 0;
     width: 100%;
-    position: fixed;
+    position: sticky;
   }
 
   .navbar {

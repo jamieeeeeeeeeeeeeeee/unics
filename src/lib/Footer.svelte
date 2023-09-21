@@ -17,8 +17,8 @@
       <img src="/linkedin.svg" alt="linkedin" width="50px" height="50px" />
     </a>
   </div>
-  <div>© Copyright 2018-2023 UniCS</div>
-  <div>All rights reserved</div>
+  <div class="copyright">© Copyright 2018-2023 UniCS</div>
+  <div class="copyright">All rights reserved</div>
 </div>
 
 <style>
@@ -42,5 +42,9 @@
 
   .footer > div > a > img {
     filter: invert(100%); /* :) */
+  }
+
+  .copyright {
+    font-size: 0.75em;
   }
 </style>

@@ -61,6 +61,4 @@
     margin-bottom: 0;
     color: #b536da;
   }
-
-
 </style>
