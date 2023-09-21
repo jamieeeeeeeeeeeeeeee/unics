@@ -156,6 +156,7 @@
       height: max-content;
       background-color: black;
       align-items: center;
+      padding-top: 20px;
       padding-bottom: 20px;
     }
 
