@@ -61,4 +61,10 @@
     margin-bottom: 0;
     color: #b536da;
   }
+
+  @media screen and (max-width: 800px) {
+    .unics {
+      font-size: 4em;
+    }
+  }
 </style>
