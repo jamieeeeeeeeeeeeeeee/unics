@@ -152,7 +152,6 @@
     .mobile-menu {
       position: fixed;
       width: 100%;
-      margin-top: 120px;
       display: flex;
       height: max-content;
       background-color: black;
