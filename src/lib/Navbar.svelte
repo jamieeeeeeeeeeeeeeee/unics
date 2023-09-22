@@ -119,11 +119,13 @@
     cursor: pointer;
     gap: 4px;
     margin-right: 20px;
+    background-color: transparent;
+    border: none;
   }
 
   .hamburger > div {
     width: 25px;
-    height: 3px;
+    height: 5px;
     background-color: white;
   }
 
@@ -134,6 +136,12 @@
     transition: transform 0.3s ease;
     z-index: 1;
     position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .mobile-menu.active {
@@ -181,4 +189,5 @@
       box-sizing: border-box;
     }
   }
+
 </style>

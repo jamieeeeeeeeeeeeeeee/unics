@@ -28,7 +28,7 @@
     background-color: #000;
     color: #fff;
     align-items: center;
-    padding: 5em 10px 3em 10px;
+    padding: 2em 10px 2em 10px;
   }
 
   .contacts {

@@ -30,9 +30,17 @@
 
 <style>
   main {
-    background-color: #000;
-    color: #fff;
-    padding: 0 1rem;
+    font-size: 1.5rem;
+    margin: auto;
+    background-color: rgb(224, 207, 233);
+    border-radius: 20px;
+    padding: 0.5rem 64px 3rem 64px;
+  }
+
+  @media screen and (max-width: 1264px) {
+    main {
+      border-radius: 0;
+    }
   }
 
   h1 {

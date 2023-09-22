@@ -69,6 +69,6 @@
 
   .sponsor-image {
     margin: 0 1rem;
-    filter: grayscale(100);
+    filter: grayscale(80%);
   }
 </style>
