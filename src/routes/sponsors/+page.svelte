@@ -40,7 +40,6 @@
 
   h1 {
     color: #b536da;
-    margin-top: 120px;
     font-size: 3rem;
   }
   

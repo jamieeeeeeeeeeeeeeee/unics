@@ -15,47 +15,39 @@
     </div>
 
     <div class="navbar-center">
-      <a href="/#about" class="navbar-option">About</a>
-      <a href="/#events" class="navbar-option">Events</a>
-      <a href="/committee" class="navbar-option">Committee</a>
-      <a href="/sponsors" class="navbar-option">Sponsors</a>
+      <a on:click={toggleMenu} href="/#about" class="navbar-option">About</a>
+      <a on:click={toggleMenu} href="/#events" class="navbar-option">Events</a>
+      <a on:click={toggleMenu} href="/committee" class="navbar-option">Committee</a>
+      <a on:click={toggleMenu} href="/sponsors" class="navbar-option">Sponsors</a>
     </div>
 
     <div class="navbar-right">
       <a href="https://manchesterstudentsunion.com/activities/view/unics" class="navbar-joinus">Join Us!</a>
     </div>
-    <div class="hamburger" id="hamburger" on:click={toggleMenu}>
+    <button class="hamburger" id="hamburger" on:click={toggleMenu} aria-label="Toggle menu">
+      <div></div> 
       <div></div>
       <div></div>
-      <div></div>
-    </div>
+    </button>
   </div>
 </div>
 
-{#if $openMenu}
-<div class="mobile-menu">
-  <a href="/#about" class="navbar-option">About</a>
-  <a href="/#events" class="navbar-option">Events</a>
-  <a href="/committee" class="navbar-option">Committee</a>
-  <a href="/sponsors" class="navbar-option">Sponsors</a>
-  <a href="https://manchesterstudentsunion.com/activities/view/unics" class="navbar-joinus">Join Us!</a>
+<div class="mobile-menu {$openMenu ? 'active' : ''}">
+  <a on:click={toggleMenu} href="/#about" class="navbar-option">About</a>
+  <a on:click={toggleMenu} href="/#events" class="navbar-option">Events</a>
+  <a on:click={toggleMenu} href="/committee" class="navbar-option">Committee</a>
+  <a on:click={toggleMenu} href="/sponsors" class="navbar-option">Sponsors</a>
+  <a on:click={toggleMenu} href="https://manchesterstudentsunion.com/activities/view/unics" class="navbar-joinus">Join Us!</a>
 </div>
-{/if}
-
 
 <style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .logo {
     border-radius: 25%;
     margin-right: 10px;
   }
 
   .main {
+    z-index: 10;
     top: 0;
     width: 100%;
     position: sticky;
@@ -71,6 +63,7 @@
     align-items: center;
     padding: 24px 5px;
     justify-content: space-between;
+    z-index: 10;
   }
 
   .navbar-left {
@@ -135,9 +128,19 @@
   }
 
   .mobile-menu {
-    display: none;
     flex-direction: column;
     gap: 10px;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease;
+    z-index: 1;
+    position: fixed;
+  }
+
+  .mobile-menu.active {
+    z-index: 1;
+
+    transform: translateY(-200%);
+    transition: transform 0.3s ease;
   }
 
   @media screen and (max-width: 800px) {
@@ -150,18 +153,32 @@
     }
 
     .mobile-menu {
+      z-index: 1;
       position: fixed;
       width: 100%;
       display: flex;
-      height: max-content;
       background-color: black;
       align-items: center;
       padding-top: 20px;
       padding-bottom: 20px;
     }
 
+    .mobile-menu.active {
+      z-index: 1;
+      transform: translateY(0);
+    }
+
     .navbar-joinus {
       padding: 6px 50px;
+    }
+
+    .navbar {
+      padding: 6px 5px; 
+      z-index: 10;
+    }
+
+    * {
+      box-sizing: border-box;
     }
   }
 </style>

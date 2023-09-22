@@ -1,11 +1,15 @@
+<script> 
+  import Calendar from '$lib/Calendar.svelte'
+</script>
+
 <main>
   <div class="container align-items-center">
     <div class="unics">
       <div class="uni-white">Uni</div>
       <div class="cs-purple">CS</div>
     </div>
-    <div>University of Manchester</div>
-    <div>Computer Science Society</div>
+    <div class="unicsdesc">University of Manchester</div>
+    <div class="unicsdesc">Computer Science Society</div>
   </div>
 
   <div class="container" id="about">
@@ -14,7 +18,8 @@
   </div>
   <div class="container" id="events">
     <h1>EVENTS</h1>
-    <p>Our events are suited to every level of knowledge and degree course(s). If you are someone who is interested in knowing how they can use computers to see an idea come to life, UniCS is the society for you. It doesn't matter if you have never touched a computer or been programming for years, you will never be bored at our events. And if you still aren't convinced, we have free pizza (and occasionally drinks).<br>You can keep up-to-date with our events and see a full list of them by following our <a href="https://www.instagram.com/unicsmcr/">Instagram Page</a>.</p>
+    <p>Our events are suited to every level of knowledge and degree course. If you are someone who is interested in knowing how they can use computers to see an idea come to life, UniCS is the society for you. It doesn't matter if you have never touched a computer or been programming for years, you will never be bored at our events. And if you still aren't convinced, we have free pizza (and occasionally drinks).<br>You can keep up-to-date with our events and see a full list of them by following our <a href="https://www.instagram.com/unicsmcr/">Instagram Page</a>.</p>
+    <Calendar />
   </div>
 </main>
 
@@ -44,9 +49,13 @@
   .unics {
     display: flex;
     flex-direction: row;
-    font-size: 6em;
+    font-size: 8em;
     font-weight: bold;
     margin-bottom: 3rem;
+  }
+
+  .unicsdesc {
+    font-size: 1.5em;
   }
 
   .uni-white {
@@ -64,7 +73,18 @@
 
   @media screen and (max-width: 800px) {
     .unics {
-      font-size: 4em;
+      font-size: 6.5em;
     }
+    .unicsdesc {
+      font-size: 1.2em;
+    }
+  }
+
+  .unics {
+    margin-top: -11.25rem; /*hacky*/
+  }
+
+  main {
+    font-size: 1.5rem;
   }
 </style>
