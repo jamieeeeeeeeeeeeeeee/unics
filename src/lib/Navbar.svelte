@@ -15,10 +15,10 @@
     </div>
 
     <div class="navbar-center">
-      <a href="/#about" class="navbar-option">About</a>
-      <a href="/#events" class="navbar-option">Events</a>
-      <a href="/committee" class="navbar-option">Committee</a>
-      <a href="/sponsors" class="navbar-option">Sponsors</a>
+      <a on:click={toggleMenu} href="/#about" class="navbar-option">About</a>
+      <a on:click={toggleMenu} href="/#events" class="navbar-option">Events</a>
+      <a on:click={toggleMenu} href="/committee" class="navbar-option">Committee</a>
+      <a on:click={toggleMenu} href="/sponsors" class="navbar-option">Sponsors</a>
     </div>
 
     <div class="navbar-right">
@@ -34,11 +34,11 @@
 
 {#if $openMenu}
 <div class="mobile-menu">
-  <a href="/#about" class="navbar-option">About</a>
-  <a href="/#events" class="navbar-option">Events</a>
-  <a href="/committee" class="navbar-option">Committee</a>
-  <a href="/sponsors" class="navbar-option">Sponsors</a>
-  <a href="https://manchesterstudentsunion.com/activities/view/unics" class="navbar-joinus">Join Us!</a>
+  <a on:click={toggleMenu} href="/#about" class="navbar-option">About</a>
+  <a on:click={toggleMenu} href="/#events" class="navbar-option">Events</a>
+  <a on:click={toggleMenu} href="/committee" class="navbar-option">Committee</a>
+  <a on:click={toggleMenu} href="/sponsors" class="navbar-option">Sponsors</a>
+  <a on:click={toggleMenu} href="https://manchesterstudentsunion.com/activities/view/unics" class="navbar-joinus">Join Us!</a>
 </div>
 {/if}
 

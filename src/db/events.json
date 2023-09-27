@@ -1,0 +1,11 @@
+{
+	description: "Hello",
+	events: [
+			{
+			"name": "Community Fair"
+			"datetime-from": "22/09/2023:13:00:00"
+			"datetime-to": "22/09/2023:17:00:00"
+			"description": "we are at the community fair lol"
+			}
+		]
+}
