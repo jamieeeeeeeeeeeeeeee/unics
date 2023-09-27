@@ -1,11 +1,17 @@
 <!-- the actual navbar needs a layout fix still :)-->
 <script lang="ts">
   import { writable } from 'svelte/store';
+  import { onMount } from 'svelte';
   export const openMenu = writable(false);
 
   const toggleMenu = () => {
     openMenu.update((value) => !value);
   }
+
+  onMount(() => {
+    openMenu.update((value) => false);
+  });
+  
 </script>
 
 <div class="main">
@@ -15,16 +21,16 @@
     </div>
 
     <div class="navbar-center">
-      <a on:click={toggleMenu} href="/#about" class="navbar-option">About</a>
-      <a on:click={toggleMenu} href="/#events" class="navbar-option">Events</a>
-      <a on:click={toggleMenu} href="/committee" class="navbar-option">Committee</a>
-      <a on:click={toggleMenu} href="/sponsors" class="navbar-option">Sponsors</a>
+      <a  href="/#about" class="navbar-option">About</a>
+      <a  href="/#events" class="navbar-option">Events</a>
+      <a  href="/committee" class="navbar-option">Committee</a>
+      <a  href="/sponsors" class="navbar-option">Sponsors</a>
     </div>
 
     <div class="navbar-right">
       <a href="https://manchesterstudentsunion.com/activities/view/unics" class="navbar-joinus">Join Us!</a>
     </div>
-    <div class="hamburger" id="hamburger" on:click={toggleMenu}>
+    <div class="hamburger" id="hamburger" >
       <div></div>
       <div></div>
       <div></div>
@@ -34,11 +40,11 @@
 
 {#if $openMenu}
 <div class="mobile-menu">
-  <a on:click={toggleMenu} href="/#about" class="navbar-option">About</a>
-  <a on:click={toggleMenu} href="/#events" class="navbar-option">Events</a>
-  <a on:click={toggleMenu} href="/committee" class="navbar-option">Committee</a>
-  <a on:click={toggleMenu} href="/sponsors" class="navbar-option">Sponsors</a>
-  <a on:click={toggleMenu} href="https://manchesterstudentsunion.com/activities/view/unics" class="navbar-joinus">Join Us!</a>
+  <a  href="/#about" class="navbar-option">About</a>
+  <a  href="/#events" class="navbar-option">Events</a>
+  <a  href="/committee" class="navbar-option">Committee</a>
+  <a  href="/sponsors" class="navbar-option">Sponsors</a>
+  <a  href="https://manchesterstudentsunion.com/activities/view/unics" class="navbar-joinus">Join Us!</a>
 </div>
 {/if}
 
